@@ -30,10 +30,23 @@ m = {
     
         let sum = numbersToBeSummed.reduce((accumulator, currentValue) => accumulator + currentValue);
         return sum;
+    },
+
+    deep: function(...arrays) {
+        let levelArray = [];
+        for (let i = 0; i < arrays.length; i++) {
+            if(!Array.isArray(arrays[i])) {
+                levelArray.push(arrays[i]);
+                continue;
+            }
+            let newArray = arrays[i].flat(Infinity);
+            levelArray.push(newArray);
+        }
+        let flatArray = levelArray.flat();
+        return flatArray;
     }
 
 }
-
 
 
 function makeArray (firstNumber, secondNumber) {
