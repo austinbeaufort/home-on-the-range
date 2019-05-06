@@ -51,8 +51,8 @@ h = {
 
     // 
     createFibArray: function(numToReach) {
-        let firstNum = 1;
-        let secondNum = 1;
+        let firstNum = BigInt(1);
+        let secondNum = BigInt(1);
         let total = 0;
         let fibArray = [];
         let count = 0;
@@ -155,7 +155,6 @@ function makeReverseArray(firstNumber, secondNumber) {
     return rangeArray;
 }
 // ------------------------------------------------------------------------------------------
-
 
 
 module.exports = h;
