@@ -1,4 +1,4 @@
-m = {
+h = {
     range: function(firstNumber, secondNumber) {
  
         if (firstNumber < 0 && secondNumber === undefined) {
@@ -22,6 +22,8 @@ m = {
     
         return rangeArray;
     },
+    
+    // adds strings and numbers
     add: function(...numbers) {
         let numbersFlattened = numbers.reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
 
@@ -31,7 +33,8 @@ m = {
         let sum = numbersToBeSummed.reduce((accumulator, currentValue) => accumulator + currentValue);
         return sum;
     },
-
+    
+    // complete array flatten
     deep: function(...arrays) {
         let levelArray = [];
         for (let i = 0; i < arrays.length; i++) {
@@ -44,11 +47,98 @@ m = {
         }
         let flatArray = levelArray.flat();
         return flatArray;
+    },
+
+    // 
+    createFibArray: function(numToReach) {
+        let firstNum = 1;
+        let secondNum = 1;
+        let total = 0;
+        let fibArray = [];
+        let count = 0;
+        
+        fibArray.push(firstNum);
+        while(true) {
+            total = BigInt(firstNum + secondNum);
+            if (count < numToReach) {
+                fibArray.push(total);
+                firstNum = BigInt(secondNum);
+                secondNum = BigInt(total);
+                count++;
+            }
+            else {
+                break;
+            }
+        }
+        return fibArray;
+    },
+    getPrimeFactors: function(number) {
+        let primeArray = [];
+        let i = 2;
+        while(i < 1000000) {
+            if (number % i === 0) {
+                primeArray.push(i);
+                number /= i;
+                i = 2;
+            }
+            else {
+                i++;
+            }
+        }
+        return primeArray;
+    },
+
+    findLargestPrimeFactor: function(number) {
+        let primeArray = this.getPrimeFactors(number);
+        let largestPrime = Math.max(...primeArray);
+        return largestPrime;
+    },
+
+    findSmallestPrimeFactor: function(number) {
+        let primeArray = this.getPrimeFactors(number);
+        let smallestPrime = Math.min(...primeArray);
+        return smallestPrime;
+    },
+
+    numIsPalindrome: function(number) {
+        let newNumber = String(number).split('');
+        let numToCheck = Math.floor(newNumber.length / 2);
+        for (let i = 0; i <= numToCheck; i++) {
+            if (newNumber[i] == newNumber[newNumber.length - i - 1]) {
+                if (i == numToCheck) {
+                    return true;
+                }
+                continue;
+            }
+            break;
+        }
+        return false;
+    },
+
+    findLCM(...args) {
+        let newArray = this.deep(args);
+        let numArray = newArray.map(item => Number(item));
+        let found = false;
+        let answer = 2;
+        while (found === false) {
+            found = numArray.every(item => {
+                return answer % item === 0;
+            });
+            if (found === true) return answer;
+            answer++;
+        }
+        return answer;
     }
 
 }
 
 
+
+
+
+// Helper functions
+
+// Range helper -------------------------------------------------------------------------------
 function makeArray (firstNumber, secondNumber) {
     let rangeArray = [];
     for (let i = firstNumber; i <= secondNumber; i++) {
@@ -64,6 +154,8 @@ function makeReverseArray(firstNumber, secondNumber) {
     }
     return rangeArray;
 }
+// ------------------------------------------------------------------------------------------
 
 
-module.exports = m;
+
+module.exports = h;
