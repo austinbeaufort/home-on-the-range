@@ -25,7 +25,7 @@ h.add([3], "22", [-1, -4]) // => 20
 
 h.deep([22, [[[3], 4]], [4], "33"], "7", [[10], 9]) // => [22, 3, 4, 4, "33", "7", 10, 9];
 
-h.createFibArray(10) // => [1n, 2n, 3n, 5n, 8n, 13n, 21n, 34n, 55n, 89n, 144n];
+h.createFibArray(10) // => [0n, 1n, 1n, 2n, 3n, 5n, 8n, 13n, 21n, 34n, 55n, 89n, 144n];
 
 // Note: createFibArray() returns BigInt's for percision as these numbers 
 //get large quickly. If the numbers do not exceed

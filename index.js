@@ -56,8 +56,9 @@ h = {
         let total = 0;
         let fibArray = [];
         let count = 0;
-        
+        fibArray.push(BigInt(total));
         fibArray.push(firstNum);
+        fibArray.push(secondNum);
         while(true) {
             total = BigInt(firstNum + secondNum);
             if (count < numToReach) {
@@ -156,5 +157,6 @@ function makeReverseArray(firstNumber, secondNumber) {
 }
 // ------------------------------------------------------------------------------------------
 
+console.log(h.createFibArray(10));
 
 module.exports = h;
