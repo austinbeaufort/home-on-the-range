@@ -157,6 +157,6 @@ function makeReverseArray(firstNumber, secondNumber) {
 }
 // ------------------------------------------------------------------------------------------
 
-console.log(h.createFibArray(10));
+
 
 module.exports = h;
