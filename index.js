@@ -207,6 +207,5 @@ function makeReverseArray(firstNumber, secondNumber) {
 }
 // ------------------------------------------------------------------------------------------
 
-console.log(h.isPrime(101));
 
 module.exports = h;
