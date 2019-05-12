@@ -116,7 +116,7 @@ h = {
         return false;
     },
 
-    findLCM(...args) {
+    findLCM: function(...args) {
         let newArray = this.deep(args);
         let numArray = newArray.map(item => Number(item));
         let found = false;
@@ -129,6 +129,47 @@ h = {
             answer++;
         }
         return answer;
+    },
+
+    findNthPrime: function(number) {
+        let count = 0;
+        let rangeArray = h.range(2, 50000000);
+        for (let item of rangeArray) {
+            let isPrime = true;
+            for (i = 2; i <= Math.sqrt(item); i++){
+                if(item % i === 0 && item != i){
+                   isPrime = false;
+                }
+             }
+            if (isPrime === true) {
+                count++;
+                if (count === number) {
+                    return item;
+                }
+            }
+        }
+        return primeArray;
+    },
+
+    getPrimeArray: function(...args) {
+        let primeArray = [];
+        if (args.length === 1) {
+            args[1] = args[0];
+            args[0] = 2;
+        }
+        let rangeArray = h.range(args[0], args[1]);
+        for (let item of rangeArray) {
+            let isPrime = true;
+            for (i = 2; i <= Math.sqrt(item); i++){
+                if(item % i === 0 && item != i){
+                   isPrime = false;
+                }
+             }
+            if (isPrime === true) {
+                primeArray.push(item);
+            }
+        }
+        return primeArray;
     }
 
 }
@@ -156,7 +197,5 @@ function makeReverseArray(firstNumber, secondNumber) {
     return rangeArray;
 }
 // ------------------------------------------------------------------------------------------
-
-
 
 module.exports = h;

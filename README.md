@@ -42,9 +42,15 @@ h.numIsPalindrome(50405) // => true
 h.numIsPalindrome(444334) // => false
 
 h.findLCM(1, 2, 3, 4, 5) // => 60
-h.findLCM(1, [2, [3]], "4", "5", [6, "7"])); // => 420
+h.findLCM(1, [2, [3]], "4", "5", [6, "7"]); // => 420
 
 // Note: findLCM will take arguments as numbers, strings, and / or arrays. #intuitive.
+
+h.findNthPrime(100) // => 541
+// Note: Works quickly for first 10,000 primes, and then up to 200,000th prime in less than 10 seconds. After the 200,00th prime no promises, but your computer may be faster than mine!
+
+h.getPrimeArray(301, 422) // => [ 307, 311, 313, 317, 331, 337, 347, 349, 353 ]
+h.getPrimeArray(22) // => [2, 3, 5, 7, 11, 13, 17, 19]
 
 ```
 
