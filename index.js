@@ -170,7 +170,16 @@ h = {
             }
         }
         return primeArray;
-    }
+    },
+
+    isPrime: function(number) {
+        for (i = 2; i <= Math.sqrt(number); i++){
+            if(number % i === 0 && number != i){
+                return false;
+            }
+        }
+        return true;
+    },
 
 }
 
@@ -197,5 +206,7 @@ function makeReverseArray(firstNumber, secondNumber) {
     return rangeArray;
 }
 // ------------------------------------------------------------------------------------------
+
+console.log(h.isPrime(101));
 
 module.exports = h;

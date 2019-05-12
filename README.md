@@ -52,6 +52,9 @@ h.findNthPrime(100) // => 541
 h.getPrimeArray(301, 422) // => [ 307, 311, 313, 317, 331, 337, 347, 349, 353 ]
 h.getPrimeArray(22) // => [2, 3, 5, 7, 11, 13, 17, 19]
 
+h.isPrime(101) // => true
+h.isPrime(27) // => false
+
 ```
 
 Combined Usage Examples:
