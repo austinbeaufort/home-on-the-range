@@ -67,7 +67,7 @@ h.add(h.deep(array, array2)); // => 36
 ```
 
 ### Notes
-m.range(2, 4) produces an array that is inclusive of the starting and
+h.range(2, 4) produces an array that is inclusive of the starting and
 ending number. [2, 3, 4];
 
-m.add() will automatically convert numbers from typeof "string" to typeof "number". Arrays will work in the function. Nested arrays "will not" work.
+h.add() will automatically convert numbers from typeof "string" to typeof "number". Arrays will work in the function. Nested arrays "will not" work.
