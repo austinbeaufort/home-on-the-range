@@ -55,6 +55,8 @@ h.getPrimeArray(22) // => [2, 3, 5, 7, 11, 13, 17, 19]
 h.isPrime(101) // => true
 h.isPrime(27) // => false
 
+h.shuffle([1, 2, 3, 4, 5]) => // Randomly rearranges array. an example might be: [4, 1, 5, 3, 2]
+
 ```
 
 Combined Usage Examples:
