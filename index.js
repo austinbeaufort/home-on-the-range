@@ -187,6 +187,17 @@ h = {
             [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
+    },
+
+    count: function(arr, item) {
+        let count = 0;
+
+        for(let i = 0; i < arr.length; i++) {
+            if(arr[i] === item) {
+                count += 1;
+            }
+        }
+        return count;
     }
 }
 

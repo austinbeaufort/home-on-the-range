@@ -57,6 +57,9 @@ h.isPrime(27) // => false
 
 h.shuffle([1, 2, 3, 4, 5]) => // Randomly rearranges array. an example might be: [4, 1, 5, 3, 2]
 
+h.count([5, 5, 3, 7, 5], 5) => // => 4
+//Takes in an array and item as arguments. Counts how many times the item appears in the array and returns the count.
+
 ```
 
 Combined Usage Examples:
