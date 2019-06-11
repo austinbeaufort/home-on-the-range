@@ -208,8 +208,12 @@ h = {
         }
         return uniques;
     },
-    randint: function(min, max) {
+    randomInt: function(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
+    },
+    randomChoice: function(array) {
+        let chosenInt = Math.floor(Math.random() * array.length);
+        return array[chosenInt];
     }
 }
 

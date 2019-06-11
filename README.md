@@ -55,10 +55,16 @@ h.getPrimeArray(22) // => [2, 3, 5, 7, 11, 13, 17, 19]
 h.isPrime(101) // => true
 h.isPrime(27) // => false
 
-h.shuffle([1, 2, 3, 4, 5]) => // Randomly rearranges array. an example might be: [4, 1, 5, 3, 2]
+h.shuffle([1, 2, 3, 4, 5]) // Randomly rearranges array. an example might be: [4, 1, 5, 3, 2]
 
-h.count([5, 5, 3, 7, 5], 5) => // => 4
+h.count([5, 5, 3, 7, 5], 5) // => 4
 //Takes in an array and item as arguments. Counts how many times the item appears in the array and returns the count.
+
+h.removeDuplicates([3, 3, 5, 7, 5, 1]) // => [3, 5, 7, 1]
+
+h.randomInt(1, 6) // Will return a random Integer (inclusive) between 1 and 6.
+
+h.randomChoice(['Joe', 'April', 'Frank', 'Sam']) // Will return one array value at random from the given array. 
 
 ```
 
