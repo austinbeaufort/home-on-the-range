@@ -198,6 +198,18 @@ h = {
             }
         }
         return count;
+    },
+    removeDuplicates: function(arr) {
+        let uniques = [];
+        for (item of arr) {
+            if(uniques.indexOf(item) === -1) {
+                uniques.push(item);
+            }
+        }
+        return uniques;
+    },
+    randint: function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
     }
 }
 
