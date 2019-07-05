@@ -66,6 +66,11 @@ h.randomInt(1, 6) // Will return a random Integer (inclusive) between 1 and 6.
 
 h.randomChoice(['Joe', 'April', 'Frank', 'Sam']) // Will return one array value at random from the given array. 
 
+h.getPythagoreanTriples(1000) // Returns all triples of (a^2 + b^2 = c^2) where "c" is less than given argument. 
+// In this case, where "c" is less than 1000.
+
+h.addDigitsOfLargeNumber(67451) // => 21 . Returns the sum of digits in the number given as the argument.
+
 ```
 
 Combined Usage Examples:

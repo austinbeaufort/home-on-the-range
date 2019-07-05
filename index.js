@@ -214,6 +214,25 @@ h = {
     randomChoice: function(array) {
         let chosenInt = Math.floor(Math.random() * array.length);
         return array[chosenInt];
+    },
+    getPythagoreanTriples: function(num) {
+        let triplesArray = [];
+        for (let i = 2; i < num; i++) {
+            for (let j = i; j < num; j++) {
+                for (let k = j; k < num; k++) {
+                    if((i**2) + (j**2) == (k**2)) {
+                        triplesArray.push([i, j, k]);
+                    }
+                }
+            }
+        } 
+        return triplesArray;
+    },
+    addDigitsOfLargeNumber: function(largeNumber) {
+        let newLargeNumber = String(BigInt(largeNumber));
+        let numArray = newLargeNumber.split('');
+        let answer = h.add(numArray);
+        return answer;
     }
 }
 
@@ -240,5 +259,7 @@ function makeReverseArray(firstNumber, secondNumber) {
     return rangeArray;
 }
 // ------------------------------------------------------------------------------------------
+
+
 
 module.exports = h;
