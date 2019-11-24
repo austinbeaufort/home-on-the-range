@@ -33,6 +33,11 @@ h = {
         let sum = numbersToBeSummed.reduce((accumulator, currentValue) => accumulator + currentValue);
         return sum;
     },
+
+    quotient: function(firstNumber, secondNumber) {
+        const quotient = Math.floor(firstNumber / secondNumber);
+        return quotient;
+    },
     
     // complete array flatten
     deep: function(...arrays) {
